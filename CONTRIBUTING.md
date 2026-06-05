@@ -6,11 +6,10 @@ Thank you for your interest in the project! We welcome improvements, new program
 
 To be included in the system, your program must be written in one of the following languages:
 
-- **Assembly (NASM, FASM, GAS)**
 - **C**
 - **C++**
 
-The code must build within the existing build system (e.g., `build-linux.sh` or `Makefile`), or you must provide build instructions.
+The code must build within the existing build system, or you must provide build instructions.
 
 ## 📮 How to Submit Code
 
