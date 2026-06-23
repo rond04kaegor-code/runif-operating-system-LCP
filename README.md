@@ -1,4 +1,4 @@
-# runif-operating-system-LCP
+# runif operating system LCP
 
 Welcome!
 This OS written in assembly language and C language.
