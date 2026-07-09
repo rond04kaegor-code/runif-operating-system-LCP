@@ -1,3 +1,0 @@
-#include "../drivers/tty.h"
-#include "../drivers/keyboard.h"
-void snake_main(void){tty_puts("═══ SNAKE ═══\nWASD to move, ESC to exit\n");int x=40,y=12,dx=1,dy=0,sc=0;while(1){kb_handler();if(kb_has()){char c=kb_get();if(c=='w'){dx=0;dy=-1;}if(c=='s'){dx=0;dy=1;}if(c=='a'){dx=-1;dy=0;}if(c=='d'){dx=1;dy=0;}}if(kb_esc_pressed())break;x+=dx;y+=dy;if(x<0)x=79;if(x>79)x=0;if(y<0)y=24;if(y>24)y=0;tty_setpos(x,y);tty_puts("O");for(volatile int i=0;i<150000;i++);tty_clear();sc++;tty_setpos(0,0);tty_puts("Score: ");char sz[8];int n=sc,p=0;if(n==0)sz[p++]='0';else{char t[8];int tp=0;while(n){t[tp++]='0'+(n%10);n/=10;}while(tp)sz[p++]=t[--tp];}sz[p]=0;tty_puts(sz);}}
